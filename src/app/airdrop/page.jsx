@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-unescaped-entities */
 'use client'
@@ -36,7 +37,7 @@ function Airdrop() {
                   onClick={connect}
                 >
                   <div className="flex">
-                    <Image src={Icon2}></Image>
+                    <Image src={Icon2} alt='icon'></Image>
                     <span className="mt-3">CONNECT METAMASK</span>
                   </div>
                 </button>
@@ -52,7 +53,7 @@ function Airdrop() {
                   onClick={connect}
                 >
                   <div className="flex">
-                    <Image src={Icon3}></Image>
+                    <Image src={Icon3} alt='icon'></Image>
                     <span className="mt-3 ml-2">CONNECT WALLET</span>
                   </div>
                 </button>
@@ -98,8 +99,8 @@ function Airdrop() {
               className="rounded-3xl border-[1px] md:w-[355px] border-white bg-black"
               indicatorProps={{
                 className: " bg-[#1F212A]  border-2 border-white rounded-3xl",
-              }}
-            >
+              }} 
+>
               {data.map(({ label, value }) => (
                 <Tab
                   key={value}
